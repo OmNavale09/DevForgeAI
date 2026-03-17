@@ -1,0 +1,71 @@
+### ================================
+### REGISTER USER
+### ================================
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+  "username": "omnavale09",
+  "email": "omnavale128@gmail.com",
+  "password": "123456",
+  "name": "Om Navale"
+}
+
+
+### ================================
+### LOGIN USER
+### ================================
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+  "email": "omnavale128@gmail.com",
+  "password": "123456"
+}
+
+
+### ================================
+### ROADMAP API (JWT REQUIRED)
+### Replace TOKEN after login
+### ================================
+POST http://localhost:5000/api/roadmap
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTkwMmFlZGRjNmJmNDNlNTRlNWU1YzgiLCJ1c2VybmFtZSI6Im9tbmF2YWxlMDkiLCJpYXQiOjE3NzEyMzQzNDJ9.f2UWP_dsCrLWMqI2yjbGEsRmQbDFhZ5E_l0PRjXa5fU
+
+{
+  "missingSkill": "MongoDB"
+}
+
+### ================================
+### ROADMAP/TITLES API (JWT REQUIRED)
+### Replace TOKEN after login
+### ================================
+GET http://localhost:5000/api/roadmaps/titles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTkwYmIyZDBkYmUxN2RiMTI4MGFlNzIiLCJ1c2VybmFtZSI6IlNocmlrcmlzaG5hXzA3IiwiaWF0IjoxNzcxMDkyNzk2fQ.B_OLyc4IWLG5PwTemX544N536pVkrl7kkjwj8cMU8ZE
+
+### ================================
+### ROADMAP DETAILS API (JWT REQUIRED)
+### Replace TOKEN after login
+### ================================
+GET http://localhost:5000/api/roadmaps/mongodb_roadmap
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OThlZmNlOThlNzMzYjgyNDI2NDJiNzMiLCJ1c2VybmFtZSI6Im9tbmF2YWxlMDkiLCJpYXQiOjE3NzA5ODAxMDEsImV4cCI6MTc3MTU4NDkwMX0.r21E5EVH07SUrTQa-l_TlxDPnssOHbnXlDFdDAKCrh4
+
+### ================================
+### USER DETAILS API (JWT REQUIRED)
+### ================================
+GET http://localhost:5000/api/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTkwMmFlZGRjNmJmNDNlNTRlNWU1YzgiLCJ1c2VybmFtZSI6Im9tbmF2YWxlMDkiLCJpYXQiOjE3NzEwNTYzMjksImV4cCI6MTc3MTY2MTEyOX0.eFy0GEDF6nHUEl_gkp76vYVJnOaqzoK0Z6DjG1ecnrg
+
+### ================================
+### PROJECT ROADMAP API (JWT REQUIRED)
+###================================
+POST http://localhost:5000/api/project_roadmap
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTkwYmIyZDBkYmUxN2RiMTI4MGFlNzIiLCJ1c2VybmFtZSI6IlNocmlrcmlzaG5hXzA3IiwiaWF0IjoxNzcxMDkyNzk2fQ.B_OLyc4IWLG5PwTemX544N536pVkrl7kkjwj8cMU8ZE
+
+{
+  "missingSkill": "Node.js"
+}

@@ -1,0 +1,92 @@
+.task-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+
+  background: rgba(20, 20, 35, 0.45);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(120, 120, 255, 0.2);
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+  width: 96%;
+}
+
+/* Hover Glow */
+.task-card:hover {
+  border-color: rgba(150, 120, 255, 0.6);
+  box-shadow: 0 0 18px rgba(120, 90, 255, 0.25);
+}
+
+/* Completed Glow */
+.task-card.completed {
+  background: rgba(120, 80, 255, 0.12);
+  box-shadow: 0 0 20px rgba(140, 100, 255, 0.35);
+}
+
+/* Status Dot */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-dot.pending {
+  background: #666;
+}
+
+.status-dot.done {
+  background: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+/* Task Content */
+.task-content {
+  flex: 1;
+}
+
+.task-title {
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+}
+
+.task-desc {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 3px;
+}
+
+/* Toggle Button */
+.task-toggle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(120, 120, 255, 0.4);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-toggle:hover {
+  background: rgba(120, 80, 255, 0.25);
+}
+
+.task-toggle.active {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  box-shadow: 0 0 14px rgba(160, 120, 255, 0.7);
+}
+
+/* Strike through on completed */
+.task-card.completed .task-title {
+  text-decoration: line-through;
+  opacity: 0.7;
+}

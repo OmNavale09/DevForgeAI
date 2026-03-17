@@ -1,0 +1,72 @@
+/* 🔥 Overlay Background (Opacity + Blur) */
+.resume-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 🔥 Modal Box */
+.resume-modal {
+  background: #111;
+  color: white;
+  width: 420px;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  animation: popupScale 0.3s ease;
+}
+
+/* 🔥 Title */
+.resume-title {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* 🔥 File Input */
+.resume-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #1e1e1e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+/* 🔥 Close Button */
+.resume-close-btn {
+  margin-top: 22px;
+  padding: 10px 16px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-close-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* 🔥 Popup Animation */
+@keyframes popupScale {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
